@@ -1,12 +1,13 @@
 # Seamless Demo
 
-Simulates a microservice architecture with 3 services that communicate with each other. The CI/CD pipeline enables us to update and deploy each one independently.
+Simulates a microservice architecture with 2 services that communicate with each other. The CI/CD pipeline enables us to update and deploy each one independently.
 
-1. API Gateway + React app hosting
-2. Payment Service
-3. Notification Service
+1. Payment Service
+2. Notification Service
 
-## This Repo is Microservice 2: Payment Service
+Both are intended to be deployed to a Fargate cluster and communicate via Service Connect.
+
+## This Repo is Microservice 1: Payment Service
 
 ### Has an Express app with 1 route:
 

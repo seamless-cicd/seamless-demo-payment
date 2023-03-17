@@ -10,9 +10,9 @@
     "test": "jest --verbose",
     "test:watch": "jest --watchAll --verbose",
     "lint": "eslint src/**/*.ts",
-    "docker:build": "docker build -t seamless-demo-payment .",
-    "docker:run": "BASH_env=.env docker run seamless-demo-payment",
-    "docker:push": "BASH_env=.env docker push seamless-demo-payment:latest"
+    "docker:build": "docker build -t jasonherngwang/seamless-demo-payment:latest .",
+    "docker:run": "docker run -d jasonherngwang/seamless-demo-payment:latest",
+    "docker:push": "docker push jasonherngwang/seamless-demo-payment:latest"
   },
   "author": "Seamless",
   "license": "ISC",
