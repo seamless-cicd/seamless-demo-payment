@@ -1,5 +1,5 @@
 {
-  "name": "seamless-demo-payment",
+  "name": "seamless-demo-prod-payment",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,10 @@
     "test": "jest --verbose",
     "test:watch": "jest --watchAll --verbose",
     "lint": "eslint src/**/*.ts",
-    "docker:build": "docker build -t jasonherngwang/seamless-demo-payment:latest .",
-    "docker:run": "docker run -d jasonherngwang/seamless-demo-payment:latest",
-    "docker:push": "docker push jasonherngwang/seamless-demo-payment:latest"
+    "docker:run": "docker run -d jasonherngwang/seamless-demo-prod-payment:1",
+    "docker:build": "docker build -t jasonherngwang/seamless-demo-prod-payment:1 .",
+    "docker:push": "docker push jasonherngwang/seamless-demo-prod-payment:1",
+    "build-push": "npm run docker:build && npm run docker:push"
   },
   "author": "Seamless",
   "license": "ISC",

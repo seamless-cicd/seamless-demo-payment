@@ -8,20 +8,20 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (_req, res) => {
-  res.status(200).send('Hello');
-});
-
-app.get('/seamless', (_req, res) => {
-  res.status(200).send('Seamless');
+  res.status(200).send('Payment Service');
 });
 
 app.post('/payments', async (req, res) => {
   try {
     const amount = req.body.amount;
     // Send customer a notification of payment received
-    await axios.post('http://seamless-demo-notification:3000/notifications', {
-      message: `You paid $${amount}. Thanks for being a customer!`,
-    });
+    // Uses AWS Service Connect namespace
+    await axios.post(
+      'http://seamless-demo-prod-notification:3000/notifications',
+      {
+        message: `You paid $${amount}. Thanks for being a customer!`,
+      },
+    );
 
     res.status(200).json({
       message:
