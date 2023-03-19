@@ -16,12 +16,9 @@ app.post('/payments', async (req, res) => {
     const amount = req.body.amount;
     // Send customer a notification of payment received
     // Uses AWS Service Connect namespace
-    await axios.post(
-      'http://seamless-demo-prod-notification:3000/notifications',
-      {
-        message: `You paid $${amount}. Thanks for being a customer!`,
-      },
-    );
+    await axios.post('http://seamless-demo-notification:3000/notifications', {
+      message: `You paid $${amount}. Thanks for being a customer!`,
+    });
 
     res.status(200).json({
       message:
