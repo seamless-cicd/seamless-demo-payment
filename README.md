@@ -26,4 +26,3 @@ Then sends a POST request to the Notification Service:
     "message": "You paid $42. Thanks for being a customer!"
 }
 ```
-.
